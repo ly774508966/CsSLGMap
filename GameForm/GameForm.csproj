@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{619FC7EF-A87D-4444-BC9F-D2C9C160BFA5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IcerDesign.Game.SLG</RootNamespace>
+    <AssemblyName>GameForm</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\EngineConfig.cs" />
+    <Compile Include="Engine\Entity\MapData.cs" />
+    <Compile Include="Engine\Enum\TerrainType.cs" />
+    <Compile Include="Engine\GameEngine.cs" />
+    <Compile Include="frmGameMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGameMain.Designer.cs">
+      <DependentUpon>frmGameMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmGameMain.resx">
+      <DependentUpon>frmGameMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Texture\MapTexture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\MA\MA_00.png" />
+    <Content Include="Image\MA\MA_01.png" />
+    <Content Include="Image\MA\MA_02.png" />
+    <Content Include="Image\MA\MA_03.png" />
+    <Content Include="Image\MA\MA_04.png" />
+    <Content Include="Image\MA\MA_05.png" />
+    <Content Include="Image\MB0\MB0_00_0.bmp" />
+    <Content Include="Image\MB0\MB0_01_0.bmp" />
+    <Content Include="Image\MB0\MB0_02_0.bmp" />
+    <Content Include="Image\MB0\MB0_03_0.bmp" />
+    <Content Include="Image\MB0\MB0_04_0.bmp" />
+    <Content Include="Image\MB0\MB0_05_0.bmp" />
+    <Content Include="Image\MB0\MB0_06_0.bmp" />
+    <Content Include="Image\MB0\MB0_07_0.bmp" />
+    <Content Include="Image\MB0\MB0_08_0.bmp" />
+    <Content Include="Image\MB0\MB0_09_0.bmp" />
+    <Content Include="Image\MB1\MB1_00_0.bmp" />
+    <Content Include="Image\MB1\MB1_01_0.bmp" />
+    <Content Include="Image\MB1\MB1_02_0.bmp" />
+    <Content Include="Image\MB1\MB1_03_0.bmp" />
+    <Content Include="Image\MB1\MB1_04_0.bmp" />
+    <Content Include="Image\MB1\MB1_05_0.bmp" />
+    <Content Include="Image\MB1\MB1_06_0.bmp" />
+    <Content Include="Image\MB1\MB1_07_0.bmp" />
+    <Content Include="Image\MB1\MB1_08_0.bmp" />
+    <Content Include="Image\MB1\MB1_09_0.bmp" />
+    <Content Include="Image\MB2\MB2_00_0.bmp" />
+    <Content Include="Image\MB2\MB2_01_0.bmp" />
+    <Content Include="Image\MB2\MB2_02_0.bmp" />
+    <Content Include="Image\MB2\MB2_03_0.bmp" />
+    <Content Include="Image\MB2\MB2_04_0.bmp" />
+    <Content Include="Image\MB2\MB2_05_0.bmp" />
+    <Content Include="Image\MB2\MB2_06_0.bmp" />
+    <Content Include="Image\MB2\MB2_07_0.bmp" />
+    <Content Include="Image\MB2\MB2_08_0.bmp" />
+    <Content Include="Image\MB2\MB2_09_0.bmp" />
+    <Content Include="Image\MBTHB.png" />
+    <Content Include="Image\MB_FLAG.bmp" />
+    <Content Include="Image\MP0\MP0_00_0.bmp" />
+    <Content Include="Image\MP0\MP0_01_0.bmp" />
+    <Content Include="Image\MP0\MP0_01_0A.bmp" />
+    <Content Include="Image\MP0\MP0_02_0.bmp" />
+    <Content Include="Image\MP0\MP0_02_0A.bmp" />
+    <Content Include="Image\MP0\MP0_03_0.bmp" />
+    <Content Include="Image\MP0\MP0_03_0A.bmp" />
+    <Content Include="Image\MP0\MP0_04_0.bmp" />
+    <Content Include="Image\MP0\MP0_05_0.bmp" />
+    <Content Include="Image\MP0\MP0_05_0A.bmp" />
+    <Content Include="Image\MP0\MP0_06_0.bmp" />
+    <Content Include="Image\MP0\MP0_06_0A.bmp" />
+    <Content Include="Image\MP0\MP0_06_1.bmp" />
+    <Content Include="Image\MP0\MP0_06_1A.bmp" />
+    <Content Include="Image\MP0\MP0_06_2.bmp" />
+    <Content Include="Image\MP0\MP0_06_2A.bmp" />
+    <Content Include="Image\MP0\MP0_07_0.bmp" />
+    <Content Include="Image\MP0\MP0_07_0A.bmp" />
+    <Content Include="Image\MP0\MP0_07_1.bmp" />
+    <Content Include="Image\MP0\MP0_07_1A.bmp" />
+    <Content Include="Image\MP0\MP0_07_2.bmp" />
+    <Content Include="Image\MP0\MP0_07_2A.bmp" />
+    <Content Include="Image\MP0\MP0_08_0.bmp" />
+    <Content Include="Image\MP0\MP0_08_0A.bmp" />
+    <Content Include="Image\MP0\MP0_09_0.bmp" />
+    <Content Include="Image\MP0\MP0_09_0A.bmp" />
+    <Content Include="Image\MP0\MP0_10_0.bmp" />
+    <Content Include="Image\MP0\MP0_11_0.bmp" />
+    <Content Include="Image\MP0\MP0_12_0.bmp" />
+    <Content Include="Image\MP0\MP0_13_0.bmp" />
+    <Content Include="Image\MP0\MP0_14_0.bmp" />
+    <Content Include="Image\MP0\MP0_15_0.bmp" />
+    <Content Include="Image\MP0\MP0_16_0.bmp" />
+    <Content Include="Image\MP1\MP1_00_0.bmp" />
+    <Content Include="Image\MP1\MP1_01_0.bmp" />
+    <Content Include="Image\MP1\MP1_01_0A.bmp" />
+    <Content Include="Image\MP1\MP1_02_0.bmp" />
+    <Content Include="Image\MP1\MP1_02_0A.bmp" />
+    <Content Include="Image\MP1\MP1_03_0.bmp" />
+    <Content Include="Image\MP1\MP1_03_0A.bmp" />
+    <Content Include="Image\MP1\MP1_04_0.bmp" />
+    <Content Include="Image\MP1\MP1_05_0.bmp" />
+    <Content Include="Image\MP1\MP1_05_0A.bmp" />
+    <Content Include="Image\MP1\MP1_06_0.bmp" />
+    <Content Include="Image\MP1\MP1_06_0A.bmp" />
+    <Content Include="Image\MP1\MP1_06_1.bmp" />
+    <Content Include="Image\MP1\MP1_06_1A.bmp" />
+    <Content Include="Image\MP1\MP1_06_2.bmp" />
+    <Content Include="Image\MP1\MP1_06_2A.bmp" />
+    <Content Include="Image\MP1\MP1_07_0.bmp" />
+    <Content Include="Image\MP1\MP1_07_0A.bmp" />
+    <Content Include="Image\MP1\MP1_07_1.bmp" />
+    <Content Include="Image\MP1\MP1_07_1A.bmp" />
+    <Content Include="Image\MP1\MP1_07_2.bmp" />
+    <Content Include="Image\MP1\MP1_07_2A.bmp" />
+    <Content Include="Image\MP1\MP1_08_0.bmp" />
+    <Content Include="Image\MP1\MP1_08_0A.bmp" />
+    <Content Include="Image\MP1\MP1_09_0.bmp" />
+    <Content Include="Image\MP1\MP1_09_0A.bmp" />
+    <Content Include="Image\MP1\MP1_10_0.bmp" />
+    <Content Include="Image\MP1\MP1_11_0.bmp" />
+    <Content Include="Image\MP1\MP1_12_0.bmp" />
+    <Content Include="Image\MP1\MP1_13_0.bmp" />
+    <Content Include="Image\MP1\MP1_14_0.bmp" />
+    <Content Include="Image\MP1\MP1_15_0.bmp" />
+    <Content Include="Image\MP1\MP1_16_0.bmp" />
+    <Content Include="Image\MP2\MP2_00_0.bmp" />
+    <Content Include="Image\MP2\MP2_01_0.bmp" />
+    <Content Include="Image\MP2\MP2_01_0A.bmp" />
+    <Content Include="Image\MP2\MP2_02_0.bmp" />
+    <Content Include="Image\MP2\MP2_02_0A.bmp" />
+    <Content Include="Image\MP2\MP2_03_0.bmp" />
+    <Content Include="Image\MP2\MP2_03_0A.bmp" />
+    <Content Include="Image\MP2\MP2_04_0.bmp" />
+    <Content Include="Image\MP2\MP2_05_0.bmp" />
+    <Content Include="Image\MP2\MP2_05_0A.bmp" />
+    <Content Include="Image\MP2\MP2_06_0.bmp" />
+    <Content Include="Image\MP2\MP2_06_0A.bmp" />
+    <Content Include="Image\MP2\MP2_06_1.bmp" />
+    <Content Include="Image\MP2\MP2_06_1A.bmp" />
+    <Content Include="Image\MP2\MP2_06_2.bmp" />
+    <Content Include="Image\MP2\MP2_06_2A.bmp" />
+    <Content Include="Image\MP2\MP2_07_0.bmp" />
+    <Content Include="Image\MP2\MP2_07_0A.bmp" />
+    <Content Include="Image\MP2\MP2_07_1.bmp" />
+    <Content Include="Image\MP2\MP2_07_1A.bmp" />
+    <Content Include="Image\MP2\MP2_07_2.bmp" />
+    <Content Include="Image\MP2\MP2_07_2A.bmp" />
+    <Content Include="Image\MP2\MP2_08_0.bmp" />
+    <Content Include="Image\MP2\MP2_08_0A.bmp" />
+    <Content Include="Image\MP2\MP2_09_0.bmp" />
+    <Content Include="Image\MP2\MP2_09_0A.bmp" />
+    <Content Include="Image\MP2\MP2_10_0.bmp" />
+    <Content Include="Image\MP2\MP2_11_0.bmp" />
+    <Content Include="Image\MP2\MP2_12_0.bmp" />
+    <Content Include="Image\MP2\MP2_13_0.bmp" />
+    <Content Include="Image\MP2\MP2_14_0.bmp" />
+    <Content Include="Image\MP2\MP2_15_0.bmp" />
+    <Content Include="Image\MP2\MP2_16_0.bmp" />
+    <Content Include="Image\MU\MU_00000.bmp" />
+    <Content Include="Image\MU\MU_00100.bmp" />
+    <Content Include="Image\MU\MU_00200.bmp" />
+    <Content Include="Image\MU\MU_00300.bmp" />
+    <Content Include="Image\MU\MU_00400.bmp" />
+    <Content Include="Image\MU\MU_00500.bmp" />
+    <Content Include="Image\MU\MU_00600.bmp" />
+    <Content Include="Image\MU\MU_00700.bmp" />
+    <Content Include="Image\MU\MU_00800.bmp" />
+    <Content Include="Image\MU\MU_00900.bmp" />
+    <Content Include="Image\MU\MU_01000.bmp" />
+    <Content Include="Image\MU\MU_01100.bmp" />
+    <Content Include="Image\MU\MU_01200.bmp" />
+    <Content Include="Image\MU\MU_01300.bmp" />
+    <Content Include="Image\MU\MU_01400.bmp" />
+    <Content Include="Image\MU\MU_01500.bmp" />
+    <Content Include="Image\MU\MU_01600.bmp" />
+    <Content Include="Image\MU\MU_01700.bmp" />
+    <Content Include="Image\MU\MU_01800.bmp" />
+    <Content Include="Image\MU\MU_01900.bmp" />
+    <Content Include="Image\MU\MU_02000.bmp" />
+    <Content Include="Image\MU\MU_02100.bmp" />
+    <Content Include="Image\MU\MU_02200.bmp" />
+    <Content Include="Image\MU\MU_02300.bmp" />
+    <Content Include="Image\MU\MU_10000.bmp" />
+    <Content Include="Image\MU\MU_10100.bmp" />
+    <Content Include="Image\MU\MU_10200.bmp" />
+    <Content Include="Image\MU\MU_10300.bmp" />
+    <Content Include="Image\MU\MU_10400.bmp" />
+    <Content Include="Image\MU\MU_10500.bmp" />
+    <Content Include="Image\MU\MU_10600.bmp" />
+    <Content Include="Image\MU\MU_10700.bmp" />
+    <Content Include="Image\MU\MU_10800.bmp" />
+    <Content Include="Image\MU\MU_10900.bmp" />
+    <Content Include="Image\MU\MU_11000.bmp" />
+    <Content Include="Image\MU\MU_11100.bmp" />
+    <Content Include="Image\MU\MU_11200.bmp" />
+    <Content Include="Image\MU\MU_11300.bmp" />
+    <Content Include="Image\MU\MU_11400.bmp" />
+    <Content Include="Image\MU\MU_11500.bmp" />
+    <Content Include="Image\MU\MU_11600.bmp" />
+    <Content Include="Image\MU\MU_11700.bmp" />
+    <Content Include="Image\MU\MU_11800.bmp" />
+    <Content Include="Image\MU\MU_11900.bmp" />
+    <Content Include="Image\MU\MU_12000.bmp" />
+    <Content Include="Image\MU\MU_12100.bmp" />
+    <Content Include="Image\MU\MU_12200.bmp" />
+    <Content Include="Image\MU\MU_12300.bmp" />
+    <Content Include="Image\MU\MU_20000.bmp" />
+    <Content Include="Image\MU\MU_20100.bmp" />
+    <Content Include="Image\MU\MU_20200.bmp" />
+    <Content Include="Image\MU\MU_20300.bmp" />
+    <Content Include="Image\MU\MU_20400.bmp" />
+    <Content Include="Image\MU\MU_20500.bmp" />
+    <Content Include="Image\MU\MU_20600.bmp" />
+    <Content Include="Image\MU\MU_20700.bmp" />
+    <Content Include="Image\MU\MU_20800.bmp" />
+    <Content Include="Image\MU\MU_20900.bmp" />
+    <Content Include="Image\MU\MU_21000.bmp" />
+    <Content Include="Image\MU\MU_21100.bmp" />
+    <Content Include="Image\MU\MU_21200.bmp" />
+    <Content Include="Image\MU\MU_21300.bmp" />
+    <Content Include="Image\MU\MU_21400.bmp" />
+    <Content Include="Image\MU\MU_21500.bmp" />
+    <Content Include="Image\MU\MU_21600.bmp" />
+    <Content Include="Image\MU\MU_21700.bmp" />
+    <Content Include="Image\MU\MU_21800.bmp" />
+    <Content Include="Image\MU\MU_21900.bmp" />
+    <Content Include="Image\MU\MU_22000.bmp" />
+    <Content Include="Image\MU\MU_22100.bmp" />
+    <Content Include="Image\MU\MU_22200.bmp" />
+    <Content Include="Image\MU\MU_22300.bmp" />
+    <Content Include="Image\MU\MU_30000.bmp" />
+    <Content Include="Image\MU\MU_30100.bmp" />
+    <Content Include="Image\MU\MU_30200.bmp" />
+    <Content Include="Image\MU\MU_30300.bmp" />
+    <Content Include="Image\MU\MU_30400.bmp" />
+    <Content Include="Image\MU\MU_30500.bmp" />
+    <Content Include="Image\MU\MU_30600.bmp" />
+    <Content Include="Image\MU\MU_30700.bmp" />
+    <Content Include="Image\MU\MU_30800.bmp" />
+    <Content Include="Image\MU\MU_30900.bmp" />
+    <Content Include="Image\MU\MU_31000.bmp" />
+    <Content Include="Image\MU\MU_31100.bmp" />
+    <Content Include="Image\MU\MU_31200.bmp" />
+    <Content Include="Image\MU\MU_31300.bmp" />
+    <Content Include="Image\MU\MU_31400.bmp" />
+    <Content Include="Image\MU\MU_31500.bmp" />
+    <Content Include="Image\MU\MU_31600.bmp" />
+    <Content Include="Image\MU\MU_31700.bmp" />
+    <Content Include="Image\MU\MU_31800.bmp" />
+    <Content Include="Image\MU\MU_31900.bmp" />
+    <Content Include="Image\MU\MU_32000.bmp" />
+    <Content Include="Image\MU\MU_32100.bmp" />
+    <Content Include="Image\MU\MU_32200.bmp" />
+    <Content Include="Image\MU\MU_32300.bmp" />
+    <Content Include="Image\MU\MU_40000.bmp" />
+    <Content Include="Image\MU\MU_40100.bmp" />
+    <Content Include="Image\MU\MU_40200.bmp" />
+    <Content Include="Image\MU\MU_40300.bmp" />
+    <Content Include="Image\MU\MU_40400.bmp" />
+    <Content Include="Image\MU\MU_40500.bmp" />
+    <Content Include="Image\MU\MU_40600.bmp" />
+    <Content Include="Image\MU\MU_40700.bmp" />
+    <Content Include="Image\MU\MU_40800.bmp" />
+    <Content Include="Image\MU\MU_40900.bmp" />
+    <Content Include="Image\MU\MU_41000.bmp" />
+    <Content Include="Image\MU\MU_41100.bmp" />
+    <Content Include="Image\MU\MU_41200.bmp" />
+    <Content Include="Image\MU\MU_41300.bmp" />
+    <Content Include="Image\MU\MU_41400.bmp" />
+    <Content Include="Image\MU\MU_41500.bmp" />
+    <Content Include="Image\MU\MU_41600.bmp" />
+    <Content Include="Image\MU\MU_41700.bmp" />
+    <Content Include="Image\MU\MU_41800.bmp" />
+    <Content Include="Image\MU\MU_41900.bmp" />
+    <Content Include="Image\MU\MU_42000.bmp" />
+    <Content Include="Image\MU\MU_42100.bmp" />
+    <Content Include="Image\MU\MU_42200.bmp" />
+    <Content Include="Image\MU\MU_42300.bmp" />
+    <Content Include="Image\RS_CUR_SCR.png" />
+    <Content Include="Image\RS_MAPCUR.bmp" />
+    <Content Include="Image\RS_MAPMARK.bmp" />
+    <Content Include="Image\RS_MUACT.png" />
+    <Content Include="Image\UI_PartsBuild.png" />
+    <Content Include="Image\UI_PartsMap.png" />
+    <Content Include="Image\UI_PartsUnit.png" />
+    <Content Include="Image\UI_SCORE01.png" />
+    <Content Include="Image\UI_WaitBuild.bmp" />
+    <Content Include="Image\UPNL_BG.bmp" />
+    <Content Include="Image\UPNL_FLAG.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
